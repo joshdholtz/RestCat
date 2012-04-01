@@ -24,11 +24,8 @@
     
     [[RestCat sharedInstance] setBaseURL:@"http://kingofti.me"];
     
-    [[RestCat sharedInstance] doGetAsJSON:@"/member" params:nil withBlock:^(NSUInteger status, id jsonData){
+    [[RestCat sharedInstance] doGet:@"/member" params:nil withBlock:^(NSUInteger status, NSData *data){
         
-        if ([jsonData isKindOfClass:[NSArray class]]) {
-            NSLog(@"Number of members - %d", [jsonData count]);
-        }
     } ];
     
     [[RestCat sharedInstance] doGetAsJSON:@"/member/2" params:nil withBlock:^(NSUInteger status, id jsonData){
