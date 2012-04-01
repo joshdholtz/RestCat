@@ -3,7 +3,9 @@ RestCat
 
 Examples - Basic
 -----------
+
 ###Set base url
+	
 	[[RestCat sharedInstance] setBaseURL:@"http://example.com"];
 
 ### Make request
@@ -25,7 +27,7 @@ Examples - Basic
 Examples - Models
 -----------
 ###Model - Member.h
-	\#import "RestCatObject.h"
+	#import "RestCatObject.h"
 
 	@interface Member : RestCatObject
 
@@ -34,7 +36,7 @@ Examples - Models
 	@end
 
 ###Model - Member.m
-#import "Member.h"
+	#import "Member.h"
 
 	@implementation Member
 
