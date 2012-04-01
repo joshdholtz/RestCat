@@ -25,7 +25,7 @@ Examples - Basic
 Examples - Models
 -----------
 ###Model - Member.h
-	#import "RestCatObject.h"
+	\#import "RestCatObject.h"
 
 	@interface Member : RestCatObject
 
@@ -50,8 +50,10 @@ Examples - Models
 
 ###Creating and Using Model - SomeOtherClass.m
 	[[RestCat sharedInstance] doGetAsJSON:@"/member/2" params:nil withBlock:^(NSUInteger status, id jsonData){
+
 		if ([jsonData isKindOfClass:[NSDictionary class]]) {
 			Member *member = [[Member alloc] initWithDictionary:jsonData];
 			NSLog(@"First Name - %@", [member firstName]);
 		}
+
 	} ];
