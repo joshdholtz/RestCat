@@ -22,7 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [[RestCat sharedInstance] setBaseURL:@"http://kingofti.me"];
+    [[RestCat sharedInstance] setBaseURL:@"http://example.com"];
     
     [[RestCat sharedInstance] doGet:@"/member" params:nil withBlock:^(NSUInteger status, NSData *data){
         
